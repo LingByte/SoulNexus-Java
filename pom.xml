@@ -21,7 +21,6 @@
         <module>lingecho-assistant-service</module>
         <module>lingecho-knowledge-service</module>
         <module>lingecho-billing-service</module>
-        <module>lingecho-alert-service</module>
         <module>lingecho-device-service</module>
     </modules>
 

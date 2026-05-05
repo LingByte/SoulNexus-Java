@@ -1,5 +1,6 @@
 package com.lingecho.user.models.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.lingecho.common.core.BaseEntity;
 import lombok.*;
@@ -26,187 +27,176 @@ public class User extends BaseEntity implements Serializable, Cloneable {
     /**
      * 邮箱
      */
+    @TableField("email")
     private String email;
 
     /**
      * 密码
      */
+    @TableField("password")
     private String password;
 
     /**
      * 手机号
      */
+    @TableField("phone")
     private String phone;
 
     /**
-     * 名字
+     * 状态
      */
-    private String firstName;
+    @TableField("status")
+    private Integer status;
 
     /**
-     * 姓氏
+     * 角色
      */
-    private String lastName;
+    @TableField("role")
+    private String role;
 
     /**
-     * 显示名称
+     * 上次登录时间
      */
-    private String displayName;
-
-    /**
-     * 是否是员工
-     */
-    private Boolean isStaff;
-
-    /**
-     * 是否启用
-     */
-    private Boolean enabled;
-
-    /**
-     * 激活状态
-     */
-    private String activated;
-
-    /**
-     * 最后登录时间
-     */
+    @TableField("last_login")
     private LocalDateTime lastLogin;
 
     /**
-     * 最后登录IP
+     * 上次登录的IP
      */
+    @TableField("last_login_ip")
     private String lastLoginIp;
 
     /**
-     * 来源
+     * 账号来源
      */
+    @TableField("source")
     private String source;
 
     /**
-     * 语言
+     * 鉴权Token
      */
-    private String Locale;
-
-    /**
-     * 时区
-     */
-    private String timezone;
-
-    /**
-     * 认证令牌
-     */
+    @TableField("authToken")
     private String authToken;
 
     /**
-     * 头像
+     * 邮件验证
      */
-    private String avatar;
-
-    /**
-     * 性别
-     */
-    private Integer gender;
-
-    /**
-     * 城市
-     */
-    private String city;
-
-    /**
-     * 地区
-     */
-    private String region;
-
-    /**
-     * 是否填写了详细信息
-     */
-    private Boolean hasFilledDetails;
-
-    /**
-     * 是否接收邮件通知
-     */
-    private Boolean emailNotifications;
-
-    /**
-     * 是否接收推送通知
-     */
-    private Boolean pushNotifications;
-
-    /**
-     * 是否接收系统通知
-     */
-    private Boolean systemNotifications;
-
-    /**
-     * 是否自动清理未读邮件
-     */
-    private Boolean autoCleanUnreadEmails;
-
-    /**
-     * 邮箱是否已验证
-     */
+    @TableField("email_verified")
     private Boolean emailVerified;
 
     /**
-     * 手机号是否已验证
+     * 手机验证
      */
+    @TableField("phone_verified")
     private Boolean phoneVerified;
 
     /**
-     * 是否启用双因素认证
+     * 双因素认证
      */
+    @TableField("two_factor_enabled")
     private Boolean twoFactorEnabled;
 
     /**
      * 双因素认证密钥
      */
-    private String twoFactorSecret;
+    @TableField("two_factor_secret")
+    private Boolean twoFactorSecret;
 
     /**
-     * 邮箱验证令牌
+     * 邮件验证Token
      */
-    private String emailVerifyToken;
+    @TableField("email_verify_token")
+    private Boolean emailVerifyToken;
 
     /**
-     * 手机验证令牌
+     * 手机验证Token
      */
-    private String phoneVerifyToken;
+    @TableField("phone_verify_token")
+    private Boolean phoneVerifyToken;
 
     /**
-     * 密码重置令牌
+     * 密码充值Token
      */
-    private String passwordResetToken;
+    @TableField("password_reset_token")
+    private Boolean passwordResetToken;
 
     /**
-     * 密码重置令牌过期时间
+     * 密码充值Token
      */
+    @TableField("password_reset_expires")
     private LocalDateTime passwordResetExpires;
 
     /**
-     * 邮箱验证令牌过期时间
+     * 邮箱验证过期时间
      */
-    private String emailVerifyExpires;
+    @TableField("email_verify_expires")
+    private LocalDateTime emailVerifyExpires;
 
     /**
      * 登录次数
      */
+    @TableField("login_count")
     private Integer loginCount;
 
     /**
-     * 最后修改密码时间
+     * 上次更改密码时间
      */
+    @TableField("last_password_change")
     private LocalDateTime lastPasswordChange;
 
     /**
-     * 角色
+     * 请求注销时间
      */
-    private String role;
+    @TableField("account_deletion_request_at")
+    private LocalDateTime accountDeletionRequestedAt;
 
     /**
-     * 权限
+     * 彻底注销时间
      */
-    private String Permissions;
+    @TableField("account_deletion_effective_at")
+    private LocalDateTime accountDeletionEffectiveAt;
+
+    /**
+     * 区域
+     */
+    @TableField("preferredLocale")
+    private String preferredLocale;
+
+    /**
+     * 偏好时区
+     */
+    @TableField("preferredTimezone")
+    private String preferredTimezone;
+
+    /**
+     * 主题模式
+     */
+    @TableField("theme_mode")
+    private String themeMode;
+
+    /**
+     * WechatOpenID
+     */
+    @TableField("wechat_open_id")
+    private String wechatOpenID;
+
+    /**
+     * WechatUnion
+     */
+    @TableField("wechat_union_id")
+    private String wechat_union_id;
+
+    /**
+     * GithubID
+     */
+    @TableField("github_id")
+    private String githubID;
+
+    /**
+     * Github登录
+     */
+    @TableField("github_login")
+    private String githubLogin;
 
     @Override
     public User clone() {

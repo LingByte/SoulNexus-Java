@@ -1,5 +1,6 @@
 package com.lingecho.common.core.storage;
 
+import com.lingecho.common.core.exception.BusinessException;
 import io.minio.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -8,6 +9,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
+import static com.lingecho.common.core.constants.Constants.HTTP;
+import static com.lingecho.common.core.constants.Constants.HTTPS;
 import static com.lingecho.common.core.enums.ResponseCodeEnum.SYSTEM_ERROR;
 
 

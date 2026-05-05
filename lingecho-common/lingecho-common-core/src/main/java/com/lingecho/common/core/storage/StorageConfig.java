@@ -3,8 +3,8 @@ package com.lingecho.common.core.storage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static cn.code100.coder.common.constants.Constants.STORAGE_TYPE_LOCAL;
-import static cn.code100.coder.common.constants.Constants.STORAGE_TYPE_MINIO;
+import static com.lingecho.common.core.constants.Constants.STORAGE_TYPE_LOCAL;
+import static com.lingecho.common.core.constants.Constants.STORAGE_TYPE_MINIO;
 
 /**
  * 存储服务配置

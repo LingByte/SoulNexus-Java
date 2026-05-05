@@ -18,9 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TranslatorUtil {
+public class TranslatorUtils {
 
-    private static final Logger logger = LoggerFactory.getLogger(TranslatorUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(TranslatorUtils.class);
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     private final HttpClient client;
@@ -28,7 +28,7 @@ public class TranslatorUtil {
     private final String email = "support@lingecho.com";
     private final String userAgent = "LingFramework/1.0";
 
-    public TranslatorUtil() {
+    public TranslatorUtils() {
         this.client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
                 .build();
@@ -206,7 +206,7 @@ public class TranslatorUtil {
         return chunks;
     }
 
-    public static String translateLong(TranslatorUtil translator,
+    public static String translateLong(TranslatorUtils translator,
                                        String text,
                                        String from,
                                        String to,
@@ -242,7 +242,7 @@ public class TranslatorUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        TranslatorUtil translator = new TranslatorUtil();
+        TranslatorUtils translator = new TranslatorUtils();
         String result = translator.translate("Hello world", "en", "zh-CN");
         System.out.println(result);
     }

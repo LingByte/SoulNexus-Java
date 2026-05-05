@@ -8,7 +8,7 @@ import java.security.NoSuchAlgorithmException;
  * 密码工具类
  * 与 Go 版本的 HashPassword 保持一致
  */
-public class PasswordUtil {
+public class PasswordUtils {
 
     /**
      * 对密码进行 SHA256 哈希加密

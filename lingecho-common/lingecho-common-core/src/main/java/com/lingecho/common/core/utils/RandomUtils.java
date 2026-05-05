@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * 随机字符串工具类
  */
-public class RandomUtil {
+public class RandomUtils {
 
     private static final String LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String NUMBERS = "0123456789";

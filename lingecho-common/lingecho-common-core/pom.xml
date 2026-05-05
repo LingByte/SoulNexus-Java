@@ -68,6 +68,23 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kennycason</groupId>
+            <artifactId>kumo-core</artifactId>
+        </dependency>
+
+        <!-- 下面tokenizers是为了中文分词引入 -->
+        <dependency>
+            <groupId>com.kennycason</groupId>
+            <artifactId>kumo-tokenizers</artifactId>
+        </dependency>
+
         <!-- Jackson 用于 Redis JSON 序列化 -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
